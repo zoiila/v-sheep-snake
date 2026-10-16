@@ -12,6 +12,7 @@
 - Deterministic grid collisions with tick-based, fractional movement.
 - Separate arena queues, lobbies, countdowns and spectators.
 - Manual static arenas, plus optional isolated template worlds through VackWorlds.
+- Per-arena setup diagnostics and cleanup limited to game-painted cells during normal reset.
 - Wool/trail colors and auras, cosmetic previews, premium permission checks and transactional purchases.
 - Persistent statistics, earned coins, achievements and XP progression.
 - English in-game interfaces with the Vack Studio visual palette.
@@ -25,7 +26,7 @@
 
 ### Verification status
 
-Current version: **1.0.0-preview.1**. The Java build and **56 automated tests** pass. Isolated Paper probes passed **10 assertions without the optional provider** and **20 with VackWorlds and WorldEdit**, including isolated leases and cleanup. No player clients participated: mounted camera smoothness, multiplayer rounds, GUI/client behavior and player reconnect/restoration still require acceptance testing. No production performance gain is claimed.
+Current version: **1.0.0-preview.2**. The Java build and **65 automated tests** pass. Isolated Paper probes passed **23 assertions without the optional provider** and **33 with VackWorlds and WorldEdit**, including malformed-record isolation, failed-preparation block preservation, actual renderer cleanup, isolated leases and cancellation. No player clients participated: mounted camera smoothness, multiplayer rounds, GUI/client behavior and player reconnect/restoration still require acceptance testing. No production performance gain is claimed.
 
 ### License and availability
 
@@ -43,6 +44,7 @@ Current version: **1.0.0-preview.1**. The Java build and **56 automated tests** 
 - تصادمات حتمية تعتمد على شبكة، وحركة جزئية تُحدّث كل نبضة خادم.
 - طوابير منفصلة للساحات، وردهات انتظار، وعدّ تنازلي، ومشاهدة.
 - ساحات ثابتة تُعدّ يدويًا، مع خيار عوالم قوالب مستقلة عبر VackWorlds.
+- تشخيص إعداد كل ساحة بصورة مستقلة، وتنظيف يقتصر على الخلايا التي رسمتها اللعبة عند إعادة الضبط العادية.
 - ألوان للصوف والمسارات وهالات تجميلية، ومعاينة للمظهر، والتحقق من صلاحية المظاهر المميزة، وعمليات شراء بمعاملات متكاملة.
 - إحصاءات وعملات مكتسبة وإنجازات وتقدم بنقاط الخبرة تُحفظ باستمرار.
 - واجهات داخل اللعبة باللغة الإنجليزية بألوان Vack Studio المعتمدة.
@@ -56,7 +58,7 @@ Current version: **1.0.0-preview.1**. The Java build and **56 automated tests** 
 
 ### حالة التحقق
 
-الإصدار الحالي: **1.0.0-preview.1**. نجح بناء Java و**56 اختبارًا آليًا**. نجحت اختبارات Paper المعزولة في **10 تحققات دون مزود العوالم الاختياري** و**20 تحققًا مع VackWorlds وWorldEdit**، بما يشمل تخصيص عوالم مستقلة وتنظيفها. لم يشارك أي عميل لاعب: ما زالت سلاسة كاميرا الركوب، والجولات متعددة اللاعبين، وسلوك الواجهات والعملاء، وإعادة الاتصال واستعادة حالة اللاعبين تحتاج إلى اختبارات قبول. لا يُدّعى تحقيق تحسن في أداء بيئة الإنتاج.
+الإصدار الحالي: **1.0.0-preview.2**. نجح بناء Java و**65 اختبارًا آليًا**. نجحت اختبارات Paper المعزولة في **23 تحققًا دون مزود العوالم الاختياري** و**33 تحققًا مع VackWorlds وWorldEdit**، بما يشمل عزل السجلات غير الصالحة، والحفاظ على الكتل عند فشل التحضير، وتنظيف العارض الفعلي، وتخصيص عوالم مستقلة وإلغاء الطلبات. لم يشارك أي عميل لاعب: ما زالت سلاسة كاميرا الركوب، والجولات متعددة اللاعبين، وسلوك الواجهات والعملاء، وإعادة الاتصال واستعادة حالة اللاعبين تحتاج إلى اختبارات قبول. لا يُدّعى تحقيق تحسن في أداء بيئة الإنتاج.
 
 ### الترخيص والإتاحة
 
